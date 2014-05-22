@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ImageFinder {
 	class Program {
@@ -10,13 +7,14 @@ namespace ImageFinder {
 			WebHelpers web = new WebHelpers();
 			string source = web.GetSourceOfURL("http://imgur.com/a/AD9E0");
 
-			ImageHelpers imageHelper = new ImageHelpers();
-			List<ImageWithDimensions> images = imageHelper.FindImages(source);
+            ImageFinder imageFinder = new ImageFinder();
+            List<ImageWithDimensions> images = imageFinder.FindImages(source);
 
 			ImageSizer sizer = new ImageSizer();
 			List<ImageWithDimensions> largestImages = sizer.GetLargestImages(images);
 			ImageWithDimensions largestImage = sizer.GetFirstLargestImage(images);
 
+            ImageHelpers imageHelper = new ImageHelpers();
 			imageHelper.SaveJpegToDisk(largestImage.Image, "test.jpg", AppDomain.CurrentDomain.BaseDirectory);
 		}
 	}

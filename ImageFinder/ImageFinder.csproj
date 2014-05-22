@@ -43,10 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ImageFinder.cs" />
-    <Compile Include="ImageSizer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Web.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
