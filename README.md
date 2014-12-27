@@ -1,4 +1,4 @@
 ImageFinder
 ===========
 
-Finds image tags in HTML along with some other stuff
+Merged with CRWestropp utilites repository.
